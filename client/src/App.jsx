@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import AdminLogin from "./pages/AdminLogin";
+
 import AdminPanel from "./pages/AdminPanel";
 
 import Assignment from "./pages/Assignment";
@@ -21,19 +21,14 @@ import StudentTimetable from "./pages/StudentTimetable";
 import StudentAttendance from "./pages/StudentAttendance";
 import PrincipalAttendance from "./pages/PrincipalAttendance";
 
-// 🔥 PRINCIPAL OVERVIEW
 import PrincipalOverview from "./pages/PrincipalOverview";
 
-// ATTENDANCE
 import Attendance from "./pages/attendance";
 
-// 🔥 REPORT PAGE
 import Report from "./pages/Report";
 
-// NOTICE
 import Notice from "./pages/Notice";
 
-// NOTES
 import Note from "./pages/Note";
 
 export default function App() {
@@ -44,100 +39,33 @@ export default function App() {
 
       <Routes>
 
-        {/* HOME */}
+        {/* ================= HOME ================= */}
         <Route
           path="/"
           element={<Home />}
         />
 
-        {/* LOGIN */}
+        {/* ================= LOGIN ================= */}
         <Route
           path="/login"
           element={<Login />}
         />
 
-        {/* ADMIN */}
+        {/* ================= ADMIN ================= */}
         <Route
-          path="/admin/login"
-          element={<AdminLogin />}
-        />
-
-        <Route
-          path="/admin"
+          path="/admin/dashboard"
           element={<AdminPanel />}
         />
 
-        {/* DASHBOARDS */}
+        {/* ================= STUDENT ================= */}
         <Route
           path="/student/dashboard"
           element={<StudentDashboard />}
         />
 
         <Route
-          path="/teacher/dashboard"
-          element={<TeacherDashboard />}
-        />
-
-        <Route
-          path="/principal/dashboard"
-          element={<PrincipalDashboard />}
-        />
-
-        {/* TEACHER ATTENDANCE */}
-        <Route
-          path="/teacher/attendance"
-          element={<Attendance />}
-        />
-
-        {/* REPORT PAGE */}
-        <Route
-          path="/teacher/attendance-report"
-          element={<Report />}
-        />
-
-        {/* PRINCIPAL ATTENDANCE */}
-        <Route
-          path="/principal/attendance"
-          element={<PrincipalAttendance />}
-        />
-
-        {/* 🔥 PRINCIPAL OVERVIEW */}
-        <Route
-          path="/principal/overview"
-          element={<PrincipalOverview />}
-        />
-
-        {/* NOTICES */}
-        <Route
-          path="/teacher/notices"
-          element={<Notice />}
-        />
-
-        <Route
-          path="/principal/notices"
-          element={<Notice />}
-        />
-
-        <Route
-          path="/student/notices"
-          element={<StudentNotices />}
-        />
-
-        {/* ASSIGNMENTS */}
-        <Route
-          path="/teacher/assignment"
-          element={<Assignment />}
-        />
-
-        <Route
-          path="/student/assignments"
-          element={<StudentAssignments />}
-        />
-
-        {/* NOTES */}
-        <Route
-          path="/teacher/note"
-          element={<Note />}
+          path="/student/attendance"
+          element={<StudentAttendance />}
         />
 
         <Route
@@ -145,10 +73,14 @@ export default function App() {
           element={<StudentNotes />}
         />
 
-        {/* TIMETABLE */}
         <Route
-          path="/teacher/timetable"
-          element={<Timetable />}
+          path="/student/assignments"
+          element={<StudentAssignments />}
+        />
+
+        <Route
+          path="/student/notices"
+          element={<StudentNotices />}
         />
 
         <Route
@@ -156,10 +88,61 @@ export default function App() {
           element={<StudentTimetable />}
         />
 
-        {/* STUDENT ATTENDANCE */}
+        {/* ================= TEACHER ================= */}
         <Route
-          path="/student/attendance"
-          element={<StudentAttendance />}
+          path="/teacher/dashboard"
+          element={<TeacherDashboard />}
+        />
+
+        <Route
+          path="/teacher/attendance"
+          element={<Attendance />}
+        />
+
+        <Route
+          path="/teacher/attendance-report"
+          element={<Report />}
+        />
+
+        <Route
+          path="/teacher/notices"
+          element={<Notice />}
+        />
+
+        <Route
+          path="/teacher/assignment"
+          element={<Assignment />}
+        />
+
+        <Route
+          path="/teacher/note"
+          element={<Note />}
+        />
+
+        <Route
+          path="/teacher/timetable"
+          element={<Timetable />}
+        />
+
+        {/* ================= PRINCIPAL ================= */}
+        <Route
+          path="/principal/dashboard"
+          element={<PrincipalDashboard />}
+        />
+
+        <Route
+          path="/principal/attendance"
+          element={<PrincipalAttendance />}
+        />
+
+        <Route
+          path="/principal/overview"
+          element={<PrincipalOverview />}
+        />
+
+        <Route
+          path="/principal/notices"
+          element={<Notice />}
         />
 
       </Routes>
