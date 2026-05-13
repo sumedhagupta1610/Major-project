@@ -1,0 +1,371 @@
+/* PAGE */
+
+.attendance-page {
+  padding: 30px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* TOP */
+
+.attendance-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.date {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ACTIONS */
+
+.top-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* DATE INPUT */
+
+.calendar-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* HISTORY */
+
+.history-box {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  border: 1px solid #c7d2fe;
+}
+
+/* BUTTONS */
+
+.report-btn,
+.holiday-btn {
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.report-btn {
+  background: #111827;
+}
+
+.report-btn:hover {
+  background: #000;
+}
+
+.holiday-btn {
+  background: #ea580c;
+}
+
+.holiday-btn:hover {
+  background: #c2410c;
+}
+
+/* CARD */
+
+.attendance-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* STUDENT ROW */
+
+.student-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10px;
+  border-bottom: 1px solid #eee;
+  transition: 0.2s ease;
+}
+
+.student-row:hover {
+  background: #f9fafb;
+}
+
+.student-row span {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* BUTTON BASE */
+
+.btn {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #e5e7eb;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+/* PRESENT */
+
+.btn.present {
+  background: #22c55e;
+  color: white;
+}
+
+/* ABSENT */
+
+.btn.absent {
+  background: #ef4444;
+  color: white;
+}
+
+/* HOVER */
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* SUBMIT */
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #3f5bd6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #3148b5;
+  transform: translateY(-1px);
+}
+
+/* POPUP */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 380px;
+  text-align: center;
+  animation: popup 0.25s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes popup {
+
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* SUMMARY */
+
+.summary {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.summary p {
+  margin: 14px 0;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🔥 FIXED PRESENT */
+
+.green-text {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* 🔥 FIXED ABSENT */
+
+.red-text {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.green {
+  color: #16a34a;
+}
+
+.red {
+  color: #dc2626;
+}
+
+.confirm-text {
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+/* WEEK LABEL */
+
+.week-label {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+/* POPUP ACTIONS */
+
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.yes-btn,
+.no-btn,
+.ok-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.yes-btn:hover,
+.no-btn:hover,
+.ok-btn:hover {
+  transform: translateY(-1px);
+}
+
+.yes-btn {
+  background: #16a34a;
+}
+
+.no-btn {
+  background: #dc2626;
+}
+
+.ok-btn {
+  background: #3f5bd6;
+  margin-top: 20px;
+}
+
+/* INPUTS */
+
+.holiday-input,
+.report-select {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.holiday-input:focus,
+.report-select:focus,
+.calendar-input:focus {
+  border-color: #3f5bd6;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .attendance-page {
+    padding: 18px;
+  }
+
+  .attendance-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calendar-input,
+  .holiday-btn,
+  .report-btn {
+    width: 100%;
+  }
+
+  .student-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .popup-box {
+    width: 92%;
+    padding: 22px;
+  }
+
+  .summary p {
+    font-size: 15px;
+  }
+
+  .green-text,
+  .red-text {
+    font-size: 20px;
+  }
+
+}
