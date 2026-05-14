@@ -486,13 +486,15 @@ export default function Attendance() {
               <p>
                 Total Students:
                 {" "}
-                <strong>{totalStudents}</strong>
+                <strong>
+                  {totalStudents}
+                </strong>
               </p>
 
               <p>
                 Present:
                 {" "}
-                <strong className="green">
+                <strong className="green-text">
                   {totalPresent}
                 </strong>
               </p>
@@ -500,7 +502,7 @@ export default function Attendance() {
               <p>
                 Absent:
                 {" "}
-                <strong className="red">
+                <strong className="red-text">
                   {totalAbsent}
                 </strong>
               </p>

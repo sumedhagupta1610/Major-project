@@ -155,13 +155,23 @@ export default function Notice() {
           onChange={handleChange}
         />
 
-        <label>
+        {/* 🔥 UPDATED CHECKBOX */}
+        <label
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            margin: "12px 0",
+            fontWeight: "500"
+          }}
+        >
           <input
             type="checkbox"
             checked={form.forAll}
             onChange={handleCheck}
           />
-          For all students
+
+          ✅ Tick for All Students
         </label>
 
         {!form.forAll && (
@@ -227,13 +237,23 @@ export default function Notice() {
             )}
 
             <div className="actions">
-              <button onClick={() => handleEdit(n)}>Edit</button>
+
               <button
+                type="button"
+                className="edit"
+                onClick={() => handleEdit(n)}
+              >
+                Edit
+              </button>
+
+              <button
+                type="button"
                 className="delete"
                 onClick={() => handleDelete(n.id)}
               >
                 Delete
               </button>
+
             </div>
 
           </div>

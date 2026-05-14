@@ -22,19 +22,11 @@ export default function StudentAttendance() {
 
       setLoading(true);
 
-      // 🔥 GET USER OBJECT
       const user = JSON.parse(
         localStorage.getItem("user")
       );
 
-      console.log("USER:", user);
-
-      // 🔥 SAFETY CHECK
       if (!user || !user.id) {
-
-        console.error(
-          "Student not found"
-        );
 
         setLoading(false);
 
@@ -43,7 +35,6 @@ export default function StudentAttendance() {
 
       const studentId = user.id;
 
-      // 🔥 FETCH
       const res = await fetch(
 
         `http://localhost:5000/api/attendance/student/${studentId}`
@@ -53,19 +44,11 @@ export default function StudentAttendance() {
       const result =
         await res.json();
 
-      console.log(
-        "ATTENDANCE:",
-        result
-      );
-
       setData(result);
 
     } catch (err) {
 
-      console.error(
-        "ATTENDANCE ERROR:",
-        err
-      );
+      console.error(err);
 
     } finally {
 
@@ -105,55 +88,88 @@ export default function StudentAttendance() {
     );
   }
 
+  // 🔥 PIE GRAPH
+  const percentage =
+    Number(data.percentage || 0);
+
+  const graphStyle = {
+
+    background: `conic-gradient(
+      #22c55e 0% ${percentage}%,
+      #ef4444 ${percentage}% 100%
+    )`
+  };
+
   return (
 
     <div className="attendance-page">
 
-      <h2>
+      <h2 className="attendance-title">
         📊 My Attendance
       </h2>
 
-      {/* ================= GRAPH ================= */}
-      <div className="graph-box">
+      {/* ================= TOP CARD ================= */}
 
-        <div className="circle">
+      <div className="attendance-card">
 
-          <span>
-            {data.percentage}%
-          </span>
+        {/* GRAPH */}
+        <div className="graph-section">
+
+          <div
+            className="pie-chart"
+            style={graphStyle}
+          >
+
+            <div className="inner-circle">
+
+              <span>
+                {percentage}%
+              </span>
+
+            </div>
+
+          </div>
+
+          <p className="graph-label">
+            Attendance Percentage
+          </p>
 
         </div>
 
-        <p>
-          Attendance Percentage
-        </p>
+        {/* STATS */}
 
-      </div>
+        <div className="stats-box">
 
-      {/* ================= STATS ================= */}
-      <div className="stats">
+          <div className="stat-card present">
 
-        <p>
-          ✅ Present:
-          {" "}
-          {data.present}
-        </p>
+            <h3>Present</h3>
 
-        <p>
-          ❌ Absent:
-          {" "}
-          {data.absent}
-        </p>
+            <p>{data.present}</p>
 
-        <p>
-          📚 Total:
-          {" "}
-          {data.total}
-        </p>
+          </div>
+
+          <div className="stat-card absent">
+
+            <h3>Absent</h3>
+
+            <p>{data.absent}</p>
+
+          </div>
+
+          <div className="stat-card total">
+
+            <h3>Total Classes</h3>
+
+            <p>{data.total}</p>
+
+          </div>
+
+        </div>
 
       </div>
 
       {/* ================= ABSENT DATES ================= */}
+
       <div className="absent-box">
 
         <h3>
@@ -163,7 +179,7 @@ export default function StudentAttendance() {
         {data.absentDates &&
         data.absentDates.length === 0 ? (
 
-          <p>
+          <p className="no-absent">
             No absents 🎉
           </p>
 

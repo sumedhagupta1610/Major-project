@@ -346,6 +346,7 @@ export default function AdminPanel() {
                 }
               />
 
+              {/* ROLE */}
               <select
                 value={form.role}
                 onChange={(e) =>
@@ -374,8 +375,8 @@ export default function AdminPanel() {
 
               </select>
 
-              <input
-                placeholder="Branch"
+              {/* BRANCH */}
+              <select
                 value={form.branch}
                 onChange={(e) =>
 
@@ -387,10 +388,36 @@ export default function AdminPanel() {
                       e.target.value
                   })
                 }
-              />
+              >
 
-              <input
-                placeholder="Year"
+                <option value="">
+                  Select Branch
+                </option>
+
+                <option value="CS">
+                  CS
+                </option>
+
+                <option value="IT">
+                  IT
+                </option>
+
+                <option value="CE">
+                  CE
+                </option>
+
+                <option value="EE">
+                  EE
+                </option>
+
+                <option value="EL">
+                  EL
+                </option>
+
+              </select>
+
+              {/* YEAR */}
+              <select
                 value={form.year}
                 onChange={(e) =>
 
@@ -402,7 +429,25 @@ export default function AdminPanel() {
                       e.target.value
                   })
                 }
-              />
+              >
+
+                <option value="">
+                  Select Year
+                </option>
+
+                <option value="1">
+                  1
+                </option>
+
+                <option value="2">
+                  2
+                </option>
+
+                <option value="3">
+                  3
+                </option>
+
+              </select>
 
               <button className="create-btn">
                 Create
@@ -501,6 +546,7 @@ export default function AdminPanel() {
                 }
               />
 
+              {/* ROLE */}
               <select
                 value={editUser.role}
                 onChange={(e) =>
@@ -529,7 +575,8 @@ export default function AdminPanel() {
 
               </select>
 
-              <input
+              {/* BRANCH */}
+              <select
                 value={editUser.branch || ""}
                 onChange={(e) =>
 
@@ -541,9 +588,36 @@ export default function AdminPanel() {
                       e.target.value
                   })
                 }
-              />
+              >
 
-              <input
+                <option value="">
+                  Select Branch
+                </option>
+
+                <option value="CS">
+                  CS
+                </option>
+
+                <option value="IT">
+                  IT
+                </option>
+
+                <option value="CE">
+                  CE
+                </option>
+
+                <option value="EE">
+                  EE
+                </option>
+
+                <option value="EL">
+                  EL
+                </option>
+
+              </select>
+
+              {/* YEAR */}
+              <select
                 value={editUser.year || ""}
                 onChange={(e) =>
 
@@ -555,7 +629,25 @@ export default function AdminPanel() {
                       e.target.value
                   })
                 }
-              />
+              >
+
+                <option value="">
+                  Select Year
+                </option>
+
+                <option value="1">
+                  1
+                </option>
+
+                <option value="2">
+                  2
+                </option>
+
+                <option value="3">
+                  3
+                </option>
+
+              </select>
 
               <button className="update-btn">
                 Update

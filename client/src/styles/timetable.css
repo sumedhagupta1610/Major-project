@@ -1,0 +1,170 @@
+.timetable-page {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+.timetable-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0f172a;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+/* FORM */
+
+.timetable-form {
+  background: white;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 28px;
+
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.timetable-form input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.timetable-form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+}
+
+.timetable-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.timetable-form button:hover {
+  background: #1d4ed8;
+}
+
+/* LIST */
+
+.timetable-list {
+  display: grid;
+  gap: 22px;
+}
+
+/* CARD */
+
+.timetable-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.timetable-card h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+/* IMAGE */
+
+.timetable-image {
+  width: 240px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+/* PDF LINK */
+
+.pdf-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* BUTTONS */
+
+.timetable-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.timetable-actions button {
+  min-width: 90px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* EDIT */
+
+.edit-btn {
+  background: #7c3aed;
+}
+
+.edit-btn:hover {
+  background: #6d28d9;
+}
+
+/* DELETE */
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .timetable-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .timetable-form button {
+    width: 100%;
+  }
+
+  .timetable-image {
+    width: 100%;
+  }
+
+}
