@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
-import logo from "../assets/logo.png";
 
 export default function Home() {
 
@@ -18,13 +17,6 @@ export default function Home() {
       <section className="hero">
 
         <div className="hero-content">
-
-          {/* LOGO */}
-          <img
-            src={logo}
-            alt="Smart Campus"
-            className="hero-logo"
-          />
 
           {/* TITLE */}
           <h1>Smart Campus</h1>
