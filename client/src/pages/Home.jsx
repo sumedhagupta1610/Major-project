@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
-import logo from "/src/assets/logo.png";
+import logo from "../assets/logo.png";
 
 export default function Home() {
 
