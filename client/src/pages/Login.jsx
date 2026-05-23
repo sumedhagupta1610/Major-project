@@ -1,4 +1,3 @@
-import logo from "../assets/logo.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
@@ -206,12 +205,6 @@ export default function Login() {
         {/* HEADER */}
         <div className="login-header">
 
-          <img
-            src={logo}
-            alt="logo"
-            className="login-logo"
-          />
-
           <h2>Smart Campus</h2>
 
           <p>
@@ -265,7 +258,6 @@ export default function Login() {
             Principal
           </button>
 
-          {/* 🔥 NEW ADMIN BUTTON */}
           <button
             className={
               role === "admin"

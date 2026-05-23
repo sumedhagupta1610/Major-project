@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/principal.css";
-import logo from "../../assets/logo.png";
 
 export default function PrincipalDashboard() {
 
@@ -62,7 +61,6 @@ export default function PrincipalDashboard() {
             +
             (overviewData.totalTeachers || 0),
 
-          // 🔥 FIXED NOTICE COUNT
           totalNotices:
             Array.isArray(noticeData.notices)
               ? noticeData.notices.length
@@ -97,13 +95,8 @@ export default function PrincipalDashboard() {
 
         <div>
 
-          {/* ================= LOGO ================= */}
+          {/* ================= TITLE ================= */}
           <div className="principal-logo">
-
-            <img
-              src={logo}
-              alt="logo"
-            />
 
             <h1>
               Smart Campus

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/student.css";
-import logo from "../../assets/logo.png";
 
 export default function StudentDashboard() {
 
@@ -9,7 +8,6 @@ export default function StudentDashboard() {
 
   const [user, setUser] = useState(null);
 
-  // 🔥 SAFE DEFAULT ATTENDANCE
   const [attendance, setAttendance] = useState({
     total: 0,
     present: 0,
@@ -22,7 +20,6 @@ export default function StudentDashboard() {
   const [notices, setNotices] = useState([]);
   const [assignments, setAssignments] = useState([]);
 
-  // 🔥 CHATBOT STATES
   const [showChat, setShowChat] = useState(false);
 
   const [messages, setMessages] = useState([
@@ -173,9 +170,6 @@ export default function StudentDashboard() {
             aData
           );
 
-          // 🔥 IF BACKEND RETURNS:
-          // { assignments: [...] }
-
           if (aData.assignments) {
 
             setAssignments(
@@ -183,8 +177,6 @@ export default function StudentDashboard() {
             );
 
           }
-
-          // 🔥 IF BACKEND RETURNS ARRAY DIRECTLY
 
           else if (Array.isArray(aData)) {
 
@@ -322,12 +314,6 @@ export default function StudentDashboard() {
 
         <div className="brand">
 
-          <img
-            src={logo}
-            alt="logo"
-            className="logo"
-          />
-
           <span className="brand-text">
             Smart Campus
           </span>
@@ -376,7 +362,6 @@ export default function StudentDashboard() {
             🔔 Notices
           </p>
 
-          {/* AI */}
           <p
             onClick={() =>
               setShowChat(true)

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import "../../styles/teacher.css";
 
 export default function TeacherDashboard() {
@@ -22,7 +21,6 @@ export default function TeacherDashboard() {
 
     try {
 
-      // 🔥 USING EXISTING WORKING STORAGE
       const data = localStorage.getItem("user");
 
       if (!data) {
@@ -93,12 +91,6 @@ export default function TeacherDashboard() {
 
         <div className="teacher-brand">
 
-          <img
-            src={logo}
-            alt="logo"
-            className="teacher-logo"
-          />
-
           <h2>Smart Campus</h2>
 
         </div>
@@ -138,14 +130,12 @@ export default function TeacherDashboard() {
 
           <div>
 
-            {/* 🔥 DYNAMIC NAME */}
             <h1>
               Welcome Back,
               {" "}
               {teacher?.full_name || "Teacher"} 👋
             </h1>
 
-            {/* 🔥 DYNAMIC BRANCH + YEAR */}
             <p>
               {teacher?.branch || "Department"}
               {" • "}
