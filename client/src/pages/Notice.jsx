@@ -3,7 +3,7 @@ import "../styles/notice.css";
 
 export default function Notice() {
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [notices, setNotices] = useState([]);
   const [editId, setEditId] = useState(null);
@@ -222,7 +222,7 @@ export default function Notice() {
             {n.image && (
               n.image.endsWith(".pdf") ? (
                 <a
-                  href={`http://localhost:5000/uploads/${n.image}`}
+                  href={`https://smart-campus-backend-5mw6.onrender.com/uploads/${n.image}`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -230,7 +230,7 @@ export default function Notice() {
                 </a>
               ) : (
                 <img
-                  src={`http://localhost:5000/uploads/${n.image}`}
+                  src={`https://smart-campus-backend-5mw6.onrender.com/uploads/${n.image}`}
                   alt="notice"
                 />
               )

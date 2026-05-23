@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function StudentTimetable() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [data, setData] = useState([]);
 
@@ -49,7 +49,7 @@ export default function StudentTimetable() {
             {t.file && (
               t.file.endsWith(".pdf") ? (
                 <a
-                  href={`http://localhost:5000/uploads/${t.file}`}
+                  href={`https://smart-campus-backend-5mw6.onrender.com/uploads/${t.file}`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -57,7 +57,7 @@ export default function StudentTimetable() {
                 </a>
               ) : (
                 <img
-                  src={`http://localhost:5000/uploads/${t.file}`}
+                  src={`https://smart-campus-backend-5mw6.onrender.com/uploads/${t.file}`}
                   alt="timetable"
                   style={{ width: "200px", marginTop: "10px" }}
                 />

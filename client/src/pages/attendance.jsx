@@ -56,7 +56,7 @@ export default function Attendance() {
 
         const res = await fetch(
 
-          `http://localhost:5000/api/students?year=${teacherData.year}&branch=${teacherData.branch}`
+          `https://smart-campus-backend-5mw6.onrender.com/api/students?year=${teacherData.year}&branch=${teacherData.branch}`
 
         );
 
@@ -99,7 +99,7 @@ export default function Attendance() {
         // CHECK HOLIDAY
         const holidayRes = await fetch(
 
-          `http://localhost:5000/api/holidays/${selectedDate}`
+          `https://smart-campus-backend-5mw6.onrender.com/api/holidays/${selectedDate}`
 
         );
 
@@ -121,7 +121,7 @@ export default function Attendance() {
         // FULL ATTENDANCE
         const res = await fetch(
 
-          `http://localhost:5000/api/attendance/full/${selectedDate}`
+          `https://smart-campus-backend-5mw6.onrender.com/api/attendance/full/${selectedDate}`
 
         );
 
@@ -215,7 +215,7 @@ export default function Attendance() {
 
       const res = await fetch(
 
-        "http://localhost:5000/api/attendance",
+        "https://smart-campus-backend-5mw6.onrender.com/api/attendance",
 
         {
           method: "POST",
@@ -296,7 +296,7 @@ export default function Attendance() {
 
       const res = await fetch(
 
-        "http://localhost:5000/api/holidays",
+        "https://smart-campus-backend-5mw6.onrender.com/api/holidays",
 
         {
           method: "POST",

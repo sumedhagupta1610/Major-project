@@ -89,7 +89,7 @@ export default function StudentDashboard() {
 
           const attRes = await fetch(
 
-            `http://localhost:5000/api/attendance/student/${user.id}`
+            `https://smart-campus-backend-5mw6.onrender.com/api/attendance/student/${user.id}`
 
           );
 
@@ -136,7 +136,7 @@ export default function StudentDashboard() {
         try {
 
           const nRes = await fetch(
-            `http://localhost:5000/api/notices`
+            `https://smart-campus-backend-5mw6.onrender.com/api/notices`
           );
 
           const nData =
@@ -162,7 +162,7 @@ export default function StudentDashboard() {
         try {
 
           const aRes = await fetch(
-            `http://localhost:5000/api/assignments`
+            `https://smart-campus-backend-5mw6.onrender.com/api/assignments`
           );
 
           const aData =
@@ -251,7 +251,7 @@ export default function StudentDashboard() {
 
       const response = await fetch(
 
-        "http://localhost:5000/api/chat/chat",
+        "https://smart-campus-backend-5mw6.onrender.com/api/chat/chat",
 
         {
           method: "POST",

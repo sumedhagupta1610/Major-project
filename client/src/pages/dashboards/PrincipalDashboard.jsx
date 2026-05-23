@@ -41,7 +41,7 @@ export default function PrincipalDashboard() {
 
         // OVERVIEW
         const overviewRes = await fetch(
-          "http://localhost:5000/api/overview"
+          "https://smart-campus-backend-5mw6.onrender.com/api/overview"
         );
 
         const overviewData =
@@ -49,7 +49,7 @@ export default function PrincipalDashboard() {
 
         // NOTICES
         const noticeRes = await fetch(
-          "http://localhost:5000/api/notices"
+          "https://smart-campus-backend-5mw6.onrender.com/api/notices"
         );
 
         const noticeData =

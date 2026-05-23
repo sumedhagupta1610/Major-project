@@ -3,7 +3,7 @@ import "../styles/assignment.css";
 
 export default function Assignment() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [assignments, setAssignments] = useState([]);
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function StudentNotices() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [notices, setNotices] = useState([]);
 

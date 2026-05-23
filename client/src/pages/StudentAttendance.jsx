@@ -37,7 +37,7 @@ export default function StudentAttendance() {
 
       const res = await fetch(
 
-        `http://localhost:5000/api/attendance/student/${studentId}`
+        `https://smart-campus-backend-5mw6.onrender.com/api/attendance/student/${studentId}`
 
       );
 

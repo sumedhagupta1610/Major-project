@@ -66,7 +66,7 @@ export default function PrincipalAttendance() {
 
       const res = await fetch(
 
-        `http://localhost:5000/api/students?branch=${branch}&year=${year}`
+        `https://smart-campus-backend-5mw6.onrender.com/api/students?branch=${branch}&year=${year}`
 
       );
 
@@ -158,7 +158,7 @@ export default function PrincipalAttendance() {
       setLowStudents([]);
 
       let url =
-        `http://localhost:5000/api/principal-attendance/report?branch=${branch}&year=${year}&type=${type}`;
+        `https://smart-campus-backend-5mw6.onrender.com/api/principal-attendance/report?branch=${branch}&year=${year}&type=${type}`;
 
       // DAILY
       if (type === "daily") {
@@ -239,7 +239,7 @@ export default function PrincipalAttendance() {
 
       const res = await fetch(
 
-        `http://localhost:5000/api/principal-attendance/low?branch=${branch}&year=${year}`
+        `https://smart-campus-backend-5mw6.onrender.com/api/principal-attendance/low?branch=${branch}&year=${year}`
 
       );
 

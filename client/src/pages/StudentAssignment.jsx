@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function StudentAssignments() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [assignments, setAssignments] = useState([]);
 

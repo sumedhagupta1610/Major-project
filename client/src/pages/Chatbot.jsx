@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Chatbot() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);

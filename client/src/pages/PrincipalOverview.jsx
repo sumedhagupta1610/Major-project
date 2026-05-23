@@ -39,7 +39,7 @@ export default function PrincipalOverview() {
       try {
 
         const res = await fetch(
-          "http://localhost:5000/api/overview"
+          "https://smart-campus-backend-5mw6.onrender.com/api/overview"
         );
 
         const data = await res.json();

@@ -49,7 +49,7 @@ export default function AttendanceReport() {
 
         const res = await fetch(
 
-          `http://localhost:5000/api/students?year=${teacherData.year}&branch=${teacherData.branch}`
+          `https://smart-campus-backend-5mw6.onrender.com/api/students?year=${teacherData.year}&branch=${teacherData.branch}`
 
         );
 
@@ -73,7 +73,7 @@ export default function AttendanceReport() {
     try {
 
       let url =
-        `http://localhost:5000/api/attendance/report/${reportType}`;
+        `https://smart-campus-backend-5mw6.onrender.com/api/attendance/report/${reportType}`;
 
       // ================= STUDENT =================
       if (selectedStudent) {

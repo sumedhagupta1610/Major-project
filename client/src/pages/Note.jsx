@@ -3,7 +3,7 @@ import "../styles/note.css";
 
 export default function Note() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [notes, setNotes] = useState([]);
 

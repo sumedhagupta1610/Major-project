@@ -3,7 +3,7 @@ import "../styles/timetable.css";
 
 export default function Timetable() {
 
-  const API = "http://localhost:5000";
+  const API = "https://smart-campus-backend-5mw6.onrender.com";
 
   const [data, setData] = useState([]);
 
@@ -239,7 +239,7 @@ export default function Timetable() {
             ) ? (
 
               <a
-                href={`http://localhost:5000/uploads/${t.file}`}
+                href={`https://smart-campus-backend-5mw6.onrender.com/uploads/${t.file}`}
                 target="_blank"
                 rel="noreferrer"
                 className="pdf-link"
@@ -252,7 +252,7 @@ export default function Timetable() {
               t.file && (
 
                 <img
-                  src={`http://localhost:5000/uploads/${t.file}`}
+                  src={`https://smart-campus-backend-5mw6.onrender.com/uploads/${t.file}`}
                   alt="timetable"
                   className="timetable-image"
                 />

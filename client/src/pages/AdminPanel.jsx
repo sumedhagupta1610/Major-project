@@ -20,7 +20,7 @@ export default function AdminPanel() {
     year: ""
   });
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://smart-campus-backend-5mw6.onrender.com";
 
   useEffect(() => {
     fetchUsers();
