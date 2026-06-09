@@ -21,7 +21,7 @@ export default function Home() {
           {/* TITLE */}
           <h1>Smart Campus</h1>
 
-          <h2>Management System</h2>
+  
 
           {/* DESCRIPTION */}
           <p>

@@ -207,9 +207,7 @@ export default function Login() {
 
           <h2>Smart Campus</h2>
 
-          <p>
-            Management System
-          </p>
+      
 
         </div>
 

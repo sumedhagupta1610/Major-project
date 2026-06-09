@@ -53,26 +53,41 @@ router.post("/admin/login", async (req, res) => {
    NORMAL USER LOGIN
 ========================= */
 router.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+
+  const { email, password, role } = req.body;
 
   if (!email || !password) {
-    return res.status(400).json({ message: "Email and password required" });
+    return res.status(400).json({
+      message: "Email and password required"
+    });
   }
 
   try {
+
     const [rows] = await db.query(
       "SELECT * FROM users WHERE email = ? LIMIT 1",
       [email]
     );
 
     if (rows.length === 0) {
-      return res.status(401).json({ message: "User not found" });
+      return res.status(401).json({
+        message: "User not found"
+      });
     }
 
     const user = rows[0];
 
     if (password !== user.password) {
-      return res.status(401).json({ message: "Invalid password" });
+      return res.status(401).json({
+        message: "Invalid password"
+      });
+    }
+
+    // 🔥 NEW ROLE CHECK
+    if (role !== user.role) {
+      return res.status(401).json({
+        message: "Selected role does not match your account"
+      });
     }
 
     const token = jwt.sign(
@@ -81,7 +96,6 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1d" }
     );
 
-    // 🔥 IMPORTANT (FINAL RESPONSE)
     res.json({
       token,
       role: user.role,
@@ -95,8 +109,12 @@ router.post("/login", async (req, res) => {
     });
 
   } catch (err) {
+
     console.error("LOGIN ERROR:", err);
-    res.status(500).json({ message: "Server error" });
+
+    res.status(500).json({
+      message: "Server error"
+    });
   }
 });
 
